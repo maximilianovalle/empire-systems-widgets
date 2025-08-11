@@ -36,7 +36,7 @@
               "RelativeDocumentMoniker": "widget-form\\Form1.cs",
               "ToolTip": "C:\\Users\\twofa\\Desktop\\repos\\empire-systems\\widget-form\\Form1.cs",
               "RelativeToolTip": "widget-form\\Form1.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAwwEsAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAAAHAAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-11T16:05:56.554Z",
               "EditorCaption": ""
@@ -50,8 +50,7 @@
               "ToolTip": "C:\\Users\\twofa\\Desktop\\repos\\empire-systems\\widget-form\\Form1.cs [Design]",
               "RelativeToolTip": "widget-form\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-11T16:07:52.565Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-08-11T16:07:52.565Z"
             },
             {
               "$type": "Document",
@@ -63,8 +62,7 @@
               "RelativeToolTip": "widget-form\\Form1.Designer.cs",
               "ViewState": "AgIAAHIAAAAAAAAAAAAAAGgAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-11T16:02:02.656Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-11T16:02:02.656Z"
             }
           ]
         }

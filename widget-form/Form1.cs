@@ -2,78 +2,29 @@ namespace widget_form
 {
     public partial class empireSystemsForm : Form {
 
+        int labelXLocation = 299;
+        int labelYLocation = 294;
+        int comboBoxXLocation = 302;
+        int comboBoxYLocation = 317;
+
         // -- FUNCTIONS --
-        private void disableTypeASubtypeControls() {
-            typeASubtypesLabel.Enabled = false;
-            typeASubtypesLabel.Hide();
 
-            typeASubtypesComboBox.Enabled = false;
-            typeASubtypesComboBox.Hide();
+        private void disableSubtypeControls(Label label, ComboBox  comboBox) {
+            label.Enabled = false;
+            label.Hide();
+
+            comboBox.Enabled = false;
+            comboBox.Hide();
         }
 
-        private void enableTypeASubtypeControls() {
-            typeASubtypesLabel.Enabled = true;
-            typeASubtypesLabel.Show();
-            typeASubtypesLabel.Location = new Point(299, 289);
+        private void enableSubtypeControls(Label label, ComboBox comboBox) {
+            label.Enabled = true;
+            label.Show();
+            label.Location = new Point(labelXLocation, labelYLocation);
 
-
-            typeASubtypesComboBox.Enabled = true;
-            typeASubtypesComboBox.Show();
-            typeASubtypesComboBox.Location = new Point(302, 312);
-        }
-
-        private void disableTypeBSubtypeControls() {
-            typeBSubtypesLabel.Enabled = false;
-            typeBSubtypesLabel.Hide();
-
-            typeBSubtypesComboBox.Enabled = false;
-            typeBSubtypesComboBox.Hide();
-        }
-
-        private void enableTypeBSubtypeControls() {
-            typeBSubtypesLabel.Enabled = true;
-            typeBSubtypesLabel.Show();
-            typeBSubtypesLabel.Location = new Point(299, 289);
-
-            typeBSubtypesComboBox.Enabled = true;
-            typeBSubtypesComboBox.Show();
-            typeBSubtypesComboBox.Location = new Point(302, 312);
-        }
-
-        private void disableType1SubtypeControls() {
-            type1SubtypesLabel.Enabled = false;
-            type1SubtypesLabel.Hide();
-
-            type1SubtypesComboBox.Enabled = false;
-            type1SubtypesComboBox.Hide();
-        }
-
-        private void enableType1SubtypeControls() {
-            type1SubtypesLabel.Enabled = true;
-            type1SubtypesLabel.Show();
-            type1SubtypesLabel.Location = new Point(299, 289);
-
-            type1SubtypesComboBox.Enabled = true;
-            type1SubtypesComboBox.Show();
-            type1SubtypesComboBox.Location = new Point(302, 312);
-        }
-
-        private void disableType2SubtypeControls() {
-            type2SubtypesLabel.Enabled = false;
-            type2SubtypesLabel.Hide();
-
-            type2SubtypesComboBox.Enabled = false;
-            type2SubtypesComboBox.Hide();
-        }
-
-        private void enableType2SubtypeControls() {
-            type2SubtypesLabel.Enabled = true;
-            type2SubtypesLabel.Show();
-            type2SubtypesLabel.Location = new Point(299, 289);
-
-            type2SubtypesComboBox.Enabled = true;
-            type2SubtypesComboBox.Show();
-            type2SubtypesComboBox.Location = new Point(302, 312);
+            comboBox.Enabled = true;
+            comboBox.Show();
+            comboBox.Location = new Point(comboBoxXLocation, comboBoxYLocation);
         }
 
         // -- EVENTS --
@@ -82,44 +33,44 @@ namespace widget_form
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
 
-            disableTypeBSubtypeControls();
-            disableType1SubtypeControls();
-            disableType2SubtypeControls();
+            disableSubtypeControls(typeBSubtypesLabel, typeBSubtypesComboBox);
+            disableSubtypeControls(type1SubtypesLabel, type1SubtypesComboBox);
+            disableSubtypeControls(type2SubtypesLabel, type2SubtypesComboBox);
         }
 
         private void widgetTypeOptA_CheckedChanged(object sender, EventArgs e) {
             if (widgetTypeOptA.Checked) {   // type A is selected
-                enableTypeASubtypeControls();
+                enableSubtypeControls(typeASubtypesLabel, typeASubtypesComboBox);
             }
             else {                          // type A is NOT selected
-                disableTypeASubtypeControls();
+                disableSubtypeControls(typeASubtypesLabel, typeASubtypesComboBox);
             }
         }
 
         private void widgetTypeOptB_CheckedChanged(object sender, EventArgs e) {
             if (widgetTypeOptB.Checked) {   // type B is selected
-                enableTypeBSubtypeControls();
+                enableSubtypeControls(typeBSubtypesLabel, typeBSubtypesComboBox);
             }
             else {                          // type B is NOT selected
-                disableTypeBSubtypeControls();
+                disableSubtypeControls(typeBSubtypesLabel, typeBSubtypesComboBox);
             }
         }
 
         private void widgetTypeOpt1_CheckedChanged(object sender, EventArgs e) {
             if (widgetTypeOpt1.Checked) {   // type 1 is selected
-                enableType1SubtypeControls();
+                enableSubtypeControls(type1SubtypesLabel, type1SubtypesComboBox);
             }
             else {                          // type 1 is NOT selected
-                disableType1SubtypeControls();
+                disableSubtypeControls(type1SubtypesLabel, type1SubtypesComboBox);
             }
         }
 
         private void widgetTypeOpt2_CheckedChanged(object sender, EventArgs e) {
             if (widgetTypeOpt2.Checked) {   // type 2 is selected
-                enableType2SubtypeControls();
+                enableSubtypeControls(type2SubtypesLabel, type2SubtypesComboBox);
             }
             else {                          // type 2 is NOT selected
-                disableType2SubtypeControls();
+                disableSubtypeControls(type2SubtypesLabel, type2SubtypesComboBox);
             }
         }
     }

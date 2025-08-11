@@ -49,7 +49,7 @@
             // 
             // submitBtn
             // 
-            submitBtn.Location = new Point(335, 370);
+            submitBtn.Location = new Point(335, 375);
             submitBtn.Name = "submitBtn";
             submitBtn.Size = new Size(140, 40);
             submitBtn.TabIndex = 0;
@@ -62,7 +62,7 @@
             widgetTypeGroupBox.Controls.Add(widgetTypeOpt1);
             widgetTypeGroupBox.Controls.Add(widgetTypeOptB);
             widgetTypeGroupBox.Controls.Add(widgetTypeOptA);
-            widgetTypeGroupBox.Location = new Point(278, 117);
+            widgetTypeGroupBox.Location = new Point(278, 122);
             widgetTypeGroupBox.Name = "widgetTypeGroupBox";
             widgetTypeGroupBox.Size = new Size(250, 157);
             widgetTypeGroupBox.TabIndex = 1;
@@ -117,7 +117,8 @@
             // 
             // widgetNameTextBox
             // 
-            widgetNameTextBox.Location = new Point(278, 66);
+            widgetNameTextBox.Location = new Point(278, 71);
+            widgetNameTextBox.MaxLength = 500;
             widgetNameTextBox.Name = "widgetNameTextBox";
             widgetNameTextBox.Size = new Size(250, 27);
             widgetNameTextBox.TabIndex = 2;
@@ -125,7 +126,7 @@
             // widgetNameLabel
             // 
             widgetNameLabel.AutoSize = true;
-            widgetNameLabel.Location = new Point(275, 43);
+            widgetNameLabel.Location = new Point(275, 48);
             widgetNameLabel.Name = "widgetNameLabel";
             widgetNameLabel.Size = new Size(102, 20);
             widgetNameLabel.TabIndex = 3;
@@ -135,7 +136,7 @@
             // 
             typeASubtypesComboBox.FormattingEnabled = true;
             typeASubtypesComboBox.Items.AddRange(new object[] { "Apple", "Aardvark", "Astronaut" });
-            typeASubtypesComboBox.Location = new Point(302, 312);
+            typeASubtypesComboBox.Location = new Point(302, 317);
             typeASubtypesComboBox.Name = "typeASubtypesComboBox";
             typeASubtypesComboBox.Size = new Size(207, 28);
             typeASubtypesComboBox.TabIndex = 4;
@@ -144,7 +145,7 @@
             // typeASubtypesLabel
             // 
             typeASubtypesLabel.AutoSize = true;
-            typeASubtypesLabel.Location = new Point(299, 289);
+            typeASubtypesLabel.Location = new Point(299, 294);
             typeASubtypesLabel.Name = "typeASubtypesLabel";
             typeASubtypesLabel.Size = new Size(118, 20);
             typeASubtypesLabel.TabIndex = 5;
