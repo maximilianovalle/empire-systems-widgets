@@ -1,6 +1,6 @@
 ﻿namespace widget_form
 {
-    partial class Form1
+    partial class empireSystemsForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -26,12 +26,19 @@
         ///  Required method for Designer support - do not modify
         ///  the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
-        {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+        private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(empireSystemsForm));
+            SuspendLayout();
+            // 
+            // empireSystemsForm
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Name = "empireSystemsForm";
+            Text = "Empire Systems - Widget Submission";
+            ResumeLayout(false);
         }
 
         #endregion

@@ -1,0 +1,17 @@
+C:\Users\twofa\Desktop\repos\empire-systems\widget-form\bin\Debug\net9.0-windows\widget-form.exe
+C:\Users\twofa\Desktop\repos\empire-systems\widget-form\bin\Debug\net9.0-windows\widget-form.deps.json
+C:\Users\twofa\Desktop\repos\empire-systems\widget-form\bin\Debug\net9.0-windows\widget-form.runtimeconfig.json
+C:\Users\twofa\Desktop\repos\empire-systems\widget-form\bin\Debug\net9.0-windows\widget-form.dll
+C:\Users\twofa\Desktop\repos\empire-systems\widget-form\bin\Debug\net9.0-windows\widget-form.pdb
+C:\Users\twofa\Desktop\repos\empire-systems\widget-form\obj\Debug\net9.0-windows\widget-form.csproj.GenerateResource.cache
+C:\Users\twofa\Desktop\repos\empire-systems\widget-form\obj\Debug\net9.0-windows\widget-form.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\twofa\Desktop\repos\empire-systems\widget-form\obj\Debug\net9.0-windows\widget-form.AssemblyInfoInputs.cache
+C:\Users\twofa\Desktop\repos\empire-systems\widget-form\obj\Debug\net9.0-windows\widget-form.AssemblyInfo.cs
+C:\Users\twofa\Desktop\repos\empire-systems\widget-form\obj\Debug\net9.0-windows\widget-form.csproj.CoreCompileInputs.cache
+C:\Users\twofa\Desktop\repos\empire-systems\widget-form\obj\Debug\net9.0-windows\widget-form.sourcelink.json
+C:\Users\twofa\Desktop\repos\empire-systems\widget-form\obj\Debug\net9.0-windows\widget-form.dll
+C:\Users\twofa\Desktop\repos\empire-systems\widget-form\obj\Debug\net9.0-windows\refint\widget-form.dll
+C:\Users\twofa\Desktop\repos\empire-systems\widget-form\obj\Debug\net9.0-windows\widget-form.pdb
+C:\Users\twofa\Desktop\repos\empire-systems\widget-form\obj\Debug\net9.0-windows\widget-form.genruntimeconfig.cache
+C:\Users\twofa\Desktop\repos\empire-systems\widget-form\obj\Debug\net9.0-windows\ref\widget-form.dll
+C:\Users\twofa\Desktop\repos\empire-systems\widget-form\obj\Debug\net9.0-windows\widget_form.empireSystemsForm.resources
