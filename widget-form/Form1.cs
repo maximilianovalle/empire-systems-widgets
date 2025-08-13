@@ -1,11 +1,11 @@
-namespace widget_form
-{
+namespace widget_form {
     public partial class empireSystemsForm : Form {
 
-        int labelXLocation = 299;
-        int labelYLocation = 294;
-        int comboBoxXLocation = 302;
-        int comboBoxYLocation = 317;
+        // TODO: connect to postgres DB
+        // Currently Done: added EF Core nuget packages ?? idk
+
+        int labelXLocation = 299, labelYLocation = 294;
+        int comboBoxXLocation = 302, comboBoxYLocation = 317;
 
         // -- FUNCTIONS --
 

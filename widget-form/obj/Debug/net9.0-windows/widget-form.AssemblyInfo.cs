@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("widget-form")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+334490bca1aebee6e83abe022659be96ac2cf61a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7b91a068a47cedd27501bbf8ab287305ef49572a")]
 [assembly: System.Reflection.AssemblyProductAttribute("widget-form")]
 [assembly: System.Reflection.AssemblyTitleAttribute("widget-form")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
