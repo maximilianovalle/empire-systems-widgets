@@ -11,10 +11,6 @@
       "RelativeMoniker": "D:0:0:{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|Solution Items{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{597539A3-7AB4-4CF4-974C-A08146EFBF28}|widget-form\\widget-form.csproj|c:\\users\\twofa\\desktop\\repos\\empire-systems\\widget-form\\password.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{597539A3-7AB4-4CF4-974C-A08146EFBF28}|widget-form\\widget-form.csproj|solutionrelative:widget-form\\password.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\twofa\\Desktop\\repos\\empire-systems\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
     },
@@ -34,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -43,25 +39,12 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "password.txt",
-              "DocumentMoniker": "C:\\Users\\twofa\\Desktop\\repos\\empire-systems\\widget-form\\password.txt",
-              "RelativeDocumentMoniker": "widget-form\\password.txt",
-              "ToolTip": "C:\\Users\\twofa\\Desktop\\repos\\empire-systems\\widget-form\\password.txt",
-              "RelativeToolTip": "widget-form\\password.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-08-14T14:42:20.673Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "README.md",
               "DocumentMoniker": "C:\\Users\\twofa\\Desktop\\repos\\empire-systems\\README.md",
               "RelativeDocumentMoniker": "README.md",
               "ToolTip": "C:\\Users\\twofa\\Desktop\\repos\\empire-systems\\README.md",
               "RelativeToolTip": "README.md",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA9AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
               "WhenOpened": "2025-08-12T00:39:48.364Z",
               "EditorCaption": ""
@@ -87,26 +70,25 @@
               "RelativeDocumentMoniker": "widget-form\\Form1.cs",
               "ToolTip": "C:\\Users\\twofa\\Desktop\\repos\\empire-systems\\widget-form\\Form1.cs",
               "RelativeToolTip": "widget-form\\Form1.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAHAAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACcAAABzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-11T16:05:56.554Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\twofa\\Desktop\\repos\\empire-systems\\widget-form\\Form1.cs",
               "RelativeDocumentMoniker": "widget-form\\Form1.cs",
               "ToolTip": "C:\\Users\\twofa\\Desktop\\repos\\empire-systems\\widget-form\\Form1.cs [Design]",
               "RelativeToolTip": "widget-form\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-11T16:07:52.565Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-08-11T16:07:52.565Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "Form1.Designer.cs",
               "DocumentMoniker": "C:\\Users\\twofa\\Desktop\\repos\\empire-systems\\widget-form\\Form1.Designer.cs",
               "RelativeDocumentMoniker": "widget-form\\Form1.Designer.cs",
@@ -114,8 +96,7 @@
               "RelativeToolTip": "widget-form\\Form1.Designer.cs",
               "ViewState": "AgIAABAAAAAAAAAAAIBpwBYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-11T16:02:02.656Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-11T16:02:02.656Z"
             }
           ]
         }

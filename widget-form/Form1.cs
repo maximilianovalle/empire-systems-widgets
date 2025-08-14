@@ -5,16 +5,11 @@ using Npgsql;
 namespace widget_form {
     public partial class empireSystemsForm : Form {
 
-        // WARNING DO NOT COMMIT YET !!!
-        // TODO: HIDE PASSWORD
-        // TODO: revert to only DB connection before committing,, "Connect to PostgreSQL database" and THEN "Store widget data in PostgreSQL database"
-
         NpgsqlConnection vCon = null!;
 
         private void DBConnection() {
             string password = File.ReadAllText("C:\\Users\\twofa\\Desktop\\repos\\empire-systems\\widget-form\\password.txt");
             string vDBConnectionString = "Host=localhost;Username=postgres;Password=" + password + ";Database=empireSystems";
-
             vCon = new NpgsqlConnection(vDBConnectionString);
 
             if (vCon.State == ConnectionState.Closed) {
@@ -26,22 +21,33 @@ namespace widget_form {
         int labelXLocation = 299, labelYLocation = 294;
         int comboBoxXLocation = 302, comboBoxYLocation = 317;
 
+        string defaultComboBoxOpt = " -- SELECT ONE --";
+
         // -- FUNCTIONS --
 
-        // TODO: take in name, type, subtype parameters
-        public void submitWidget() {
+        public void submitWidget(string name, string type, string subtype) {
             DBConnection();
+
+            // # Bad Practice: dangerous to use string concatenation
 
             NpgsqlCommand vCmd = new() {
                 Connection = vCon,
-                CommandText = "INSERT INTO widget (name, type, subtype) VALUES ('test', 'A', 'Astronaut');"
+                CommandText = "INSERT INTO widget (name, type, subtype) VALUES ('" + name + "', '" + type + "', '" + subtype + "');"
             };
 
-            _ = vCmd.ExecuteReader();
+            // TODO: use following code,, curr not working bc 'type' and 'subtype' values are string not widgetType
+
+            // var vCmd = new NpgsqlCommand("INSERT INTO widget (name, type, subtype) VALUES (@name, @type, @subtype);", vCon);
+            // vCmd.Parameters.AddWithValue("@name", name);
+            // vCmd.Parameters.AddWithValue("@type", type);
+            // vCmd.Parameters.AddWithValue("@subtype", subtype);
+
+             _ = vCmd.ExecuteNonQuery();
 
             Debug.WriteLine("Widget stored in database.");
         }
 
+        // disables a given subtype's controls (label + combo box / dropdown box)
         private void disableSubtypeControls(Label label, ComboBox comboBox) {
             label.Enabled = false;
             label.Hide();
@@ -50,6 +56,7 @@ namespace widget_form {
             comboBox.Hide();
         }
 
+        // enables a given subtype's controls (label + combo box / dropdown box)
         private void enableSubtypeControls(Label label, ComboBox comboBox) {
             label.Enabled = true;
             label.Show();
@@ -66,12 +73,11 @@ namespace widget_form {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
 
+            // enables only type A subtype controls
             disableSubtypeControls(typeBSubtypesLabel, typeBSubtypesComboBox);
             disableSubtypeControls(type1SubtypesLabel, type1SubtypesComboBox);
             disableSubtypeControls(type2SubtypesLabel, type2SubtypesComboBox);
         }
-
-        // TODO: refactor code??? repetitive
 
         private void widgetTypeOptA_CheckedChanged(object sender, EventArgs e) {
             if (widgetTypeOptA.Checked) {   // type A is selected
@@ -110,7 +116,46 @@ namespace widget_form {
         }
 
         private void submitBtn_Click(object sender, EventArgs e) {
-            submitWidget();
+            // check all form fields are filled / have selection
+            if (string.IsNullOrEmpty(widgetNameTextBox.Text)) {
+                MessageBox.Show("Please enter a widget name.");
+                widgetNameTextBox.Focus();
+                return;
+            }
+            else if ((widgetTypeOptA.Checked && typeASubtypesComboBox.Text == defaultComboBoxOpt)
+            || (widgetTypeOptB.Checked && typeBSubtypesComboBox.Text == defaultComboBoxOpt)
+            || (widgetTypeOpt1.Checked && type1SubtypesComboBox.Text == defaultComboBoxOpt)
+            || (widgetTypeOpt2.Checked && type2SubtypesComboBox.Text == defaultComboBoxOpt)) {
+                MessageBox.Show("Please select a subtype.");
+                return;
+            }
+
+            // submit widget
+            string widgetName = widgetNameTextBox.Text;
+
+            if (widgetTypeOptA.Checked) {
+                submitWidget(widgetName, "A", typeASubtypesComboBox.Text);
+                Debug.WriteLine("Stored in DB: " + widgetName + ", A, " + typeASubtypesComboBox.Text);
+            }
+            else if (widgetTypeOptB.Checked) {
+                submitWidget(widgetName, "B", typeBSubtypesComboBox.Text);
+                Debug.WriteLine("Stored in DB: " + widgetName + ", B, " + typeBSubtypesComboBox.Text);
+            }
+            else if (widgetTypeOpt1.Checked) {
+                submitWidget(widgetName, "1", type1SubtypesComboBox.Text);
+                Debug.WriteLine("Stored in DB: " + widgetName + ", 1, " + type1SubtypesComboBox.Text);
+            }
+            else {
+                submitWidget(widgetName, "2", type2SubtypesComboBox.Text);
+                Debug.WriteLine("Stored in DB: " + widgetName + ", 2, " + type2SubtypesComboBox.Text);
+            }
+
+            MessageBox.Show("Widget '" + widgetName + "' successfully submitted!");
+
+            // reset widget submission form
+            widgetNameTextBox.Clear();
+            widgetTypeOptA.Checked = true;
+            typeASubtypesComboBox.Text = defaultComboBoxOpt;
         }
     }
 }
