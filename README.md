@@ -19,3 +19,4 @@ Features:
 * [How to add Text Box Required Field Validator in .NET 6 Windows Forms Application](https://www.youtube.com/watch?v=IP2vSZrrr-M)
 * [File.ReadAllText, Get String From File](https://www.dotnetperls.com/file-readalltext#:~:text=This%20C%23%20method%20reads%20the,can%20simplify%20some%20C%23%20programs.)
 * [How should I concatenate strings?](https://stackoverflow.com/questions/3102806/how-should-i-concatenate-strings)
+* [To add a project to a solution](https://help.autodesk.com/view/OARX/2024/ENU/?guid=GUID-28A97A98-26CD-422E-813B-29F77B773D67)
