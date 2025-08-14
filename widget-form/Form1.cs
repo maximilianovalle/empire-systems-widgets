@@ -8,8 +8,7 @@ namespace widget_form {
         NpgsqlConnection vCon = null!;
 
         private void DBConnection() {
-            string password = File.ReadAllText("C:\\Users\\twofa\\Desktop\\repos\\empire-systems\\widget-form\\password.txt");
-            string vDBConnectionString = "Host=localhost;Username=postgres;Password=" + password + ";Database=empireSystems";
+            string vDBConnectionString = File.ReadAllText("C:\\Users\\twofa\\Desktop\\repos\\empire-systems\\widget-form\\dbConnectionString.txt");
             vCon = new NpgsqlConnection(vDBConnectionString);
 
             if (vCon.State == ConnectionState.Closed) {
