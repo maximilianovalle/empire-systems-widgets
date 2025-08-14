@@ -1,15 +1,48 @@
+using System.Diagnostics;
+using System.Data;
+using Npgsql;
+
 namespace widget_form {
     public partial class empireSystemsForm : Form {
 
-        // TODO: connect to postgres DB
-        // Currently Done: added EF Core nuget packages ?? idk
+        // WARNING DO NOT COMMIT YET !!!
+        // TODO: HIDE PASSWORD
+        // TODO: revert to only DB connection before committing,, "Connect to PostgreSQL database" and THEN "Store widget data in PostgreSQL database"
+
+        NpgsqlConnection vCon = null!;
+
+        private void DBConnection() {
+            string password = File.ReadAllText("C:\\Users\\twofa\\Desktop\\repos\\empire-systems\\widget-form\\password.txt");
+            string vDBConnectionString = "Host=localhost;Username=postgres;Password=" + password + ";Database=empireSystems";
+
+            vCon = new NpgsqlConnection(vDBConnectionString);
+
+            if (vCon.State == ConnectionState.Closed) {
+                vCon.Open();
+                Debug.WriteLine("Database connection initialized.");
+            }
+        }
 
         int labelXLocation = 299, labelYLocation = 294;
         int comboBoxXLocation = 302, comboBoxYLocation = 317;
 
         // -- FUNCTIONS --
 
-        private void disableSubtypeControls(Label label, ComboBox  comboBox) {
+        // TODO: take in name, type, subtype parameters
+        public void submitWidget() {
+            DBConnection();
+
+            NpgsqlCommand vCmd = new() {
+                Connection = vCon,
+                CommandText = "INSERT INTO widget (name, type, subtype) VALUES ('test', 'A', 'Astronaut');"
+            };
+
+            _ = vCmd.ExecuteReader();
+
+            Debug.WriteLine("Widget stored in database.");
+        }
+
+        private void disableSubtypeControls(Label label, ComboBox comboBox) {
             label.Enabled = false;
             label.Hide();
 
@@ -37,6 +70,8 @@ namespace widget_form {
             disableSubtypeControls(type1SubtypesLabel, type1SubtypesComboBox);
             disableSubtypeControls(type2SubtypesLabel, type2SubtypesComboBox);
         }
+
+        // TODO: refactor code??? repetitive
 
         private void widgetTypeOptA_CheckedChanged(object sender, EventArgs e) {
             if (widgetTypeOptA.Checked) {   // type A is selected
@@ -72,6 +107,10 @@ namespace widget_form {
             else {                          // type 2 is NOT selected
                 disableSubtypeControls(type2SubtypesLabel, type2SubtypesComboBox);
             }
+        }
+
+        private void submitBtn_Click(object sender, EventArgs e) {
+            submitWidget();
         }
     }
 }

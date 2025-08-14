@@ -55,6 +55,7 @@
             submitBtn.TabIndex = 0;
             submitBtn.Text = "Submit";
             submitBtn.UseVisualStyleBackColor = true;
+            submitBtn.Click += submitBtn_Click;
             // 
             // widgetTypeGroupBox
             // 
