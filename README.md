@@ -6,6 +6,9 @@ Features:
 * Windows Form for widget data submission to PostgreSQL database
 * ASP.NET MVC page for widget display + deletion
 
+Widget Submission Form:
+![widget form demo](./widget-form.gif)
+
 ## Acknowledgements
 
 * [Hide And Show A User Control Using A Button In C# Net](https://www.youtube.com/watch?v=zY3nbxa_jVA)
